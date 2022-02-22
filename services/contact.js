@@ -1,11 +1,11 @@
 const getAllContacts = async () => {
-  return fetch("http://localhost:3100/contact").then((response) =>
+  return fetch("https://node4059-cpd-example.host4u.cloud/contact").then((response) =>
     response.json()
   );
 };
 
 const saveContact = async (data) => {
-  return fetch("http://localhost:3100/contact", {
+  return fetch("https://node4059-cpd-example.host4u.cloud/contact", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

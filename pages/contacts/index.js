@@ -50,12 +50,12 @@ export default function Contacts() {
             <CircularProgress />
           </Box>
         )}
-        {contacts.length === 0 && !loading && (
+        {contacts?.length === 0 && !loading && (
           <h3 className={styles.description}>
             It seems that you still have no contacts to see 😎
           </h3>
         )}
-        {contacts.length > 0 && (
+        {contacts?.length > 0 && (
           <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="table with contacts">
               <TableHead>
@@ -69,7 +69,7 @@ export default function Contacts() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {contacts.map((contact, i) => (
+                {contacts?.map((contact, i) => (
                   <TableRow key={contact.id}>
                     <TableCell>{i + 1}</TableCell>
                     <TableCell>{contact.firstName}</TableCell>
